@@ -1,0 +1,37 @@
+micronaut:
+  application:
+    name: backend
+  security:
+    authentication: bearer
+    token:
+      jwt:
+        signatures:
+          secret:
+            generator:
+              secret: ${JWT_GENERATOR_SIGNATURE_SECRET:pleaseChangeThisSecretForANewOne}
+datasources:
+  default:
+    driver-class-name: org.postgresql.Driver
+    db-type: postgres
+    url: jdbc:postgresql://localhost:5432/cms
+    username: postgres
+    password: password
+    schema-generate: CREATE_DROP
+    dialect: org.hibernate.dialect.PostgreSQLDialect
+hibernate:
+  ddl-auto: update
+  hbm2ddl:
+    auto: auto
+coherence:
+  session:
+    default:
+      type: grpc
+      port: 8080
+
+jpa:
+  default:
+    properties:
+      hibernate:
+        hbm2ddl.auto: update
+    package-to-scan:
+      - com.example.entity

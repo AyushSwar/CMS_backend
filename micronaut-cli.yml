@@ -1,0 +1,6 @@
+applicationType: grpc
+defaultPackage: com.example
+testFramework: junit
+sourceLanguage: java
+buildTool: gradle
+features: [ app-name, discovery-core, gradle, grpc, hibernate-jpa, http-client-test, java, java-application, jdbc-hikari, junit, logback, lombok, micronaut-build, postgres, readme, security-annotations, security-jwt, serialization-jackson, shade, test-resources, yaml, yaml-build ]

@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.example";
+
+service FooterSectionService {
+  rpc UpdateFooterSection(FooterRequest) returns (FooterResponse);
+}
+message FooterRequest {
+  int64  id = 1;
+  string basic = 2;
+  string centered = 3;
+  string active = 4;
+}
+message FooterResponse {
+  string basic = 1;
+  string centered = 2;
+  string active = 3;
+}

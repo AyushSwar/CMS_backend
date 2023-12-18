@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.example";
+
+service NavSectionService {
+  rpc UpdateNavSection(NavRequest) returns (NavResponse);
+}
+
+message NavResponse {
+  string basic = 1;
+  string centered = 2;
+  string active = 3;
+}
+message NavRequest {
+  string  id = 1;
+  string basic = 2;
+  string centered = 3;
+  string active = 4;
+}

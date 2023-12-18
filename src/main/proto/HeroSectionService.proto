@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.example";
+
+
+service HeroSectionService {
+  rpc UpdateHeroSection(HeroSectionUpdateRequest) returns (HeroSectionResponse);
+}
+
+message HeroSectionResponse {
+  string split = 2;
+  string centered = 3;
+  string active = 4;
+}
+message HeroSectionUpdateRequest {
+  string id = 1;
+  string split = 2;
+  string centered = 3;
+  string active = 4;
+}

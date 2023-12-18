@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.example";
+
+service ContactSectionService {
+  rpc UpdateContactSection(ContactRequest) returns (ContactResponse);
+}
+message ContactRequest {
+  int64  id = 1;
+  string tile = 2;
+  string centered = 3;
+  string active = 4;
+}
+message ContactResponse {
+  string tile = 1;
+  string centered = 2;
+  string active = 3;
+}

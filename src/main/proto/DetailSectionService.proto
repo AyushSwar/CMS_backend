@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.example";
+
+service DetailSectionService {
+  rpc UpdateDetailSection(DetailRequest) returns (DetailResponse);
+}
+message DetailRequest {
+  int64  id = 1;
+  string split = 2;
+  string tile = 3;
+  string active = 4;
+}
+message DetailResponse {
+  string split = 1;
+  string tile = 2;
+  string active = 3;
+}
