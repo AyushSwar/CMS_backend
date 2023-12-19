@@ -17,7 +17,7 @@ message LoginRequest {
 }
 
 message LoginReply {
-  string access_token = 1;  // Corrected field name
+  string access_token = 1;
   string userName = 2;
   int64 userId = 3;
 }

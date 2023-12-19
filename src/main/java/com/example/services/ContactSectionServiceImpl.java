@@ -31,6 +31,7 @@ public class ContactSectionServiceImpl extends ContactSectionServiceGrpc.Contact
             // Find the user by ID
             UserEntity existingUser = userRepository.findById(request.getId()).orElse(null);
 
+
             if (existingUser == null) {
                 // Handle the case when the user is not found
                 responseObserver.onError(Status.NOT_FOUND
